@@ -10,7 +10,7 @@
 
 html {
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .8)), url('./images/background.jpg') no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .8)), url('./public/images/background.jpg') no-repeat center center fixed;
     -webkit-background-size: 100% 100%;
     -moz-background-size: 100% 100%;
     -o-background-size: 100% 100%;
@@ -21,7 +21,7 @@ html {
 body {
     position: relative;
     /* To make sure that the overlay positions itself based on the body */
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, .1)), url('./images/background.jpg') no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, .1)), url('./public/images/background.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
