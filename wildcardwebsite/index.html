@@ -1,0 +1,124 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WILDCARD GAMEWORKS</title>
+
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
+</head>
+
+<body>
+    <canvas class="webgl"></canvas>
+
+    <div class="navbar">
+        <img src="./logo.png" class="logo">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="careers.html">Careers</a></li>
+        </ul>
+    </div>
+
+    <section class="hidden" id="home">
+        <h1>WILDCARD GAMEWORKS</h1>
+        <p>Passionate. Creative. Thrilling.</p>
+
+        <div class="button-container">
+            <button id="about-button" type="button" onclick=""><span></span>ABOUT US</button>
+            <button id="contact-button" type="button" onclick=""><span></span>CONTACT US</button>
+        </div>
+    </section>
+
+    <section class="about-hidden" id="about">
+        <h2>ABOUT US</h2>
+        <div class="text-top-container about-hidden">
+            <p>HOW IT ALL STARTED</p>
+        </div>
+        <div class="text-bottom-container about-hidden">
+            <p> Our journey into game development began in March 2023, sparked by a shared passion for video games.
+                As a group of enthusiasts, we refined our skills and navigated the complexities of game creation.
+                This led us to formalize our bond and establish our own independent studio, translating our passion into
+                professional game development.
+            </p>
+        </div>
+        <div class="text-top-container about-hidden">
+            <p>OUR PHILOSOPHY</p>
+        </div>
+        <div class="text-bottom-container about-hidden">
+            <p>
+                At Wildcard Gameworks, our philosophy of game development revolves around the triad of innovation,
+                passion, and community.
+                Innovation is at the heart of our operations; we believe in pushing boundaries, exploring uncharted
+                territories, and crafting experiences that are novel and engaging.
+                We don't see game development as a process of mere content creation, but as a platform to manifest our
+                creativity.
+            </p>
+        </div>
+    </section>
+
+    <section class="contact-hidden" id="contact">
+        <div class="blob-container">
+            <svg class="blob-motion" id="visual" viewBox="0 0 960 540" width="960" height="540"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                <g transform="translate(450.7256843113689 283.4942824330989)">
+                    <path id="blob1"
+                        d="M148.7 -134.9C193.7 -103.7 231.9 -51.9 232.4 0.6C233 53 196.1 106.1 151.1 128.6C106.1 151.1 53 143 -4.4 147.4C-61.8 151.8 -123.5 168.5 -151.2 146C-178.8 123.5 -172.4 61.8 -172.8 -0.4C-173.1 -62.5 -180.3 -124.9 -152.6 -156.1C-124.9 -187.3 -62.5 -187.1 -5.3 -181.8C51.9 -176.5 103.7 -166 148.7 -134.9"
+                        fill="rgba(0, 0, 0, 0.4)"></path>
+                </g>
+                <g transform="translate(509.54377535978017 281.49390864595887)" style="visibility: hidden">
+                    <path id="blob2"
+                        d="M115.4 -137.9C137.9 -92.9 136.4 -46.4 133.6 -2.8C130.8 40.8 126.6 81.6 104.1 118.4C81.6 155.2 40.8 188.1 -8.4 196.5C-57.5 204.8 -115 188.7 -151 151.9C-187 115 -201.5 57.5 -190.8 10.7C-180.1 -36.1 -144.1 -72.1 -108.1 -117.1C-72.1 -162.1 -36.1 -216.1 5.2 -221.2C46.4 -226.4 92.9 -182.9 115.4 -137.9">
+                    </path>
+                </g>
+            </svg>
+        </div>
+
+        <div class="blob-content contact-hidden">
+            <h2>CONTACT US</h2>
+            <div class="contact-form">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="b34dbae7-399d-444d-b38a-8fa5c419caf0">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                    <div class="h-captcha" data-captcha="true"></div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="row">
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+            </div>
+
+            <div class="row">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <div class="row">
+                WILDCARD GAMEWORKS Copyright © 2023 WILDCARD GAMEWORKS - All rights reserved || Designed By: Jakob
+                Campos
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="./main.js"></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+</body>
+
+</html>

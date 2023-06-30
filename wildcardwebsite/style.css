@@ -1,0 +1,357 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Added for better box sizing */
+}
+
+html {
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .8)), url('./background.jpg') no-repeat center center fixed;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+    /* To make sure that the overlay positions itself based on the body */
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, .1)), url('./background.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.webgl {
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+}
+
+.navbar {
+    top: 0;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    z-index: 1000;
+    /* Added for navbar to stay above the content */
+}
+
+.navbar ul {
+    display: flex;
+    margin-left: 20px;
+    /* Added margin-left to push the links a bit from the logo */
+}
+
+.navbar ul li {
+    list-style: none;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+    text-align: center;
+    color: #fff;
+    height: 100vh;
+    /* Added for full viewport height */
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+section h1 {
+    text-align: center;
+    font-size: 8vmin;
+}
+
+section h2 {
+    font-size: 7vmin;
+}
+
+section p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 20px;
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+#about h2 {
+    padding-left: 15%;
+}
+
+.text-top-container {
+    margin-top: 50px;
+    margin-left: 50px;
+    background: #050505;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    width: 620px;
+}
+
+.text-bottom-container {
+    margin-left: 50px;
+    background: #05050585;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    width: 620px; /* Same width as .text-top-container */
+    height: auto;
+    text-align: center;
+    padding: 1%;
+    box-sizing: border-box; /* Padding is included in total width */
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 1s;
+}
+
+.about-hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all .5s;
+}
+
+.contact-hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: all .5s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid rgba(0, 0, 0, 1);
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span {
+    background: rgba(0, 0, 0, .7);
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span {
+    width: 100%;
+}
+
+button:hover {
+    border: none;
+}
+
+/* Blobs SVG background image via https://haikei.app/ */
+.blob-container {
+    position: absolute;
+    padding-left: 100px;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.blob-motion {
+    max-width: 100%;
+    /* You may need to adjust this value */
+    height: auto;
+    transform: scale(1.8);
+}
+
+.blob-content {
+    z-index: 1;
+}
+
+/* CONTACT FORM */
+.contact-form {
+    width: 400px;
+    margin: 0 auto;
+    padding: 0.5em;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 1em;
+    padding: 1em;
+    border: none;
+    background: rgba(17, 19, 24, .7);
+    font-size: 1em;
+    color: #fff;
+    border-radius: 20px;
+}
+
+.contact-form textarea {
+    height: 200px;
+    resize: none;
+    /* Prevents the text area from being resizable */
+}
+
+.contact-form button {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5em 2em;
+    background: rgb(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #777;
+}
+
+/* FOOTER */
+.footer {
+    padding: 30px 0px;
+    font-family: 'Play', sans-serif;
+    text-align: center;
+}
+
+.footer .row {
+    width: 100%;
+    margin: 1% 0%;
+    padding: 0.6% 0%;
+    color: gray;
+    font-size: 0.8em;
+}
+
+.footer .row a {
+    text-decoration: none;
+    color: gray;
+    transition: 0.5s;
+}
+
+.footer .row a:hover {
+    color: #fff;
+}
+
+.footer .row ul {
+    width: 100%;
+}
+
+.footer .row ul li {
+    display: inline-block;
+    margin: 0px 30px;
+}
+
+.footer .row a i {
+    font-size: 2em;
+    margin: 0% 1%;
+}
+
+@media (max-width:720px) {
+    .footer {
+        text-align: left;
+        padding: 5%;
+    }
+
+    .footer .row ul li {
+        display: block;
+        margin: 10px 0px;
+        text-align: left;
+    }
+
+    .footer .row a i {
+        margin: 0% 3%;
+    }
+}
+
+#home h1 {
+    margin-top: -80px;
+    /* Adjust this value as needed */
+}
+
+#projects h1 {
+    margin-top: -160px;
+}
+
+#news h1 {
+    margin-top: -160px;
+}
+
+#careers h1 {
+    margin-top: -160px;
+}
